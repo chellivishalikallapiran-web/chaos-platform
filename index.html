@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chaos Engineering Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🚀 Chaos Engineering Platform</h1>
+
+<div class="container">
+    <h2>Create Experiment</h2>
+
+    <label>Failure Type:</label>
+    <select id="failureType">
+        <option>Latency Injection</option>
+        <option>CPU Starvation</option>
+        <option>Service Failure</option>
+    </select>
+
+    <label>Blast Radius (%):</label>
+    <input type="number" id="blastRadius" placeholder="Enter %">
+
+    <button onclick="runExperiment()">Run Experiment</button>
+</div>
+
+<div class="container">
+    <h2>Experiment Logs</h2>
+    <ul id="logs"></ul>
+</div>
+
+<div class="container">
+    <h2>Resilience Score</h2>
+    <h3 id="score">100</h3>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="myChart" width="300" height="200"></canvas>
+</body>
+</html>
